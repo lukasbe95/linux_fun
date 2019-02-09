@@ -1,0 +1,5 @@
+dmesg | tail -20
+lsmod | head -10
+cat /var/log/syslog | tail -20
+lsmod
+rmmod ofd

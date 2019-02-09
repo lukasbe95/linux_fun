@@ -1,0 +1,1 @@
+cmd_/home/lukas/git_start/linux/drivers/first_module/ofd.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/lukas/git_start/linux/drivers/first_module/ofd.ko /home/lukas/git_start/linux/drivers/first_module/ofd.o /home/lukas/git_start/linux/drivers/first_module/ofd.mod.o ;  true
