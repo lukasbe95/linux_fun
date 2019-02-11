@@ -1,0 +1,24 @@
+#####################
+insmod ofcd.ko
+lsmod
+rmmod ofcd 
+#####################
+When we insert module we must its number
+cat /proc/devices
+Then register it as a device in /dev and add permisions to execute it
+sudo mknod /dev/ofcd0 c 239 0
+chmod a+x /dev/ofcd* 
+
+
+###########################################
+Now its time for working example 
+insmod ofwcd.ko
+lsmod
+rmmod ofwcd
+
+cat /proc/devices -> search for lukas
+as a sudo 
+echo "smt" > /dev/mynull
+cat /dev/mynull
+cat /var/log/syslog | tail -20
+
