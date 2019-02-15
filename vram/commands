@@ -1,0 +1,11 @@
+################################
+sudo insmod vram.ko
+lsmod
+rmmod vram
+#################################
+- Build the vram driver (video_ram.ko file) by running make with the same Makefile changed to build this driver.
+- Usual load of the driver using insmod video_ram.ko.
+- Usual write into /dev/vram, say using echo -n “0123456789” > /dev/vram.
+- Read the /dev/vram contents using xxd /dev/vram | less. The usual cat /dev/vram also can be used but that would give all binary content. xxd shows them up as hexadecimal in centre with the corresponding ASCII along the right side.
+- Usual unload the driver using rmmod video_ram.
+
